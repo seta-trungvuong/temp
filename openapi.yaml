@@ -1,0 +1,1603 @@
+---
+openapi: 3.0.3
+info:
+  title: RSM2022
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: "{{host}}"
+paths:
+  /contacts/all:
+    get:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contact_get_all
+      description: contact_get_all
+      operationId: contactGetAll
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /contacts/id/1:
+    get:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contact_get_by_id
+      description: contact_get_by_id
+      operationId: contactGetById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /contacts/customerId/1:
+    get:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contact_get_by_customer_id
+      description: contact_get_by_customer_id
+      operationId: contactGetByCustomerId
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /contacts/roofVendorId/1:
+    get:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contact_get_by_roof-vendor-id
+      description: contact_get_by_roof-vendor-id
+      operationId: contactGetByRoofVendorId
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /contacts/create:
+    post:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contacts_create
+      description: contacts_create
+      operationId: contactsCreate
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /contacts/update:
+    put:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contacts_update
+      description: contacts_update
+      operationId: contactsUpdate
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /contacts/delete/1:
+    delete:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contacts_delete
+      description: contacts_delete
+      operationId: contactsDelete
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: 1242007b-b8a6-4111-a902-be9bb3629f1e
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /contacts/search:
+    post:
+      tags:
+        - CORE-API
+        - contacts
+      summary: contacts_search
+      description: contacts_search
+      operationId: contactsSearch
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /customer/all:
+    get:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_get_all
+      description: customer_get_all
+      operationId: customerGetAll
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /customer/id/1:
+    get:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_get_by_id
+      description: customer_get_by_id
+      operationId: customerGetById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /customer/create:
+    post:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_create
+      description: customer_create
+      operationId: customerCreate
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /customer/update:
+    put:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_update
+      description: customer_update
+      operationId: customerUpdate
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /customer/delete/1:
+    delete:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_delete
+      description: customer_delete
+      operationId: customerDelete
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: "1"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /customer/search:
+    post:
+      tags:
+        - CORE-API
+        - customers
+      summary: customer_search
+      description: customer_search
+      operationId: customerSearch
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /customer/check-code:
+    post:
+      tags:
+        - CORE-API
+        - customers
+      summary: check_code
+      description: check_code
+      operationId: checkCode
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /operation-company/all:
+    get:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_get_all
+      description: operation-company_get_all
+      operationId: operationCompanyGetAll
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /operation-company/id/1:
+    get:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_get_by_Id
+      description: operation-company_get_by_Id
+      operationId: operationCompanyGetById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /operation-company/create:
+    post:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_create
+      description: operation-company_create
+      operationId: operationCompanyCreate
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /operation-company/update:
+    put:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_update_by_ID
+      description: operation-company_update_by_ID
+      operationId: operationCompanyUpdateById
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /operation-company/delete/1:
+    delete:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: delete_by_ID
+      description: delete_by_ID
+      operationId: deleteById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: 1242007b-b8a6-4111-a902-be9bb3629f1e
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /operation-company/search:
+    post:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_search
+      description: operation-company_search
+      operationId: operationCompanySearch
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /operation-company/check-code:
+    post:
+      tags:
+        - CORE-API
+        - operationCompanies
+      summary: operation-company_check_code
+      description: operation-company_check_code
+      operationId: operationCompanyCheckCode
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config/id/1:
+    get:
+      tags:
+        - CORE-API
+        - configKey
+      summary: get_by_ID
+      description: get_by_ID
+      operationId: getById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /config/create:
+    post:
+      tags:
+        - CORE-API
+        - configKey
+      summary: create
+      description: create
+      operationId: create
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config/check-code:
+    post:
+      tags:
+        - CORE-API
+        - configKey
+      summary: check_code
+      description: check_code
+      operationId: checkCode1
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config/search:
+    post:
+      tags:
+        - CORE-API
+        - configKey
+      summary: search
+      description: search
+      operationId: search
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config/update:
+    put:
+      tags:
+        - CORE-API
+        - configKey
+      summary: update_by_ID
+      description: update_by_ID
+      operationId: updateById
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/all:
+    get:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_get_all
+      description: roof-vendor_get_all
+      operationId: roofVendorGetAll
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /config/delete/7:
+    delete:
+      tags:
+        - CORE-API
+        - configValue
+      summary: delete_by_ID
+      description: delete_by_ID
+      operationId: deleteById2
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: 1242007b-b8a6-4111-a902-be9bb3629f1e
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config-value/id/1:
+    get:
+      tags:
+        - CORE-API
+        - configValue
+      summary: get_by_ID
+      description: get_by_ID
+      operationId: getById1
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /config-value/create:
+    post:
+      tags:
+        - CORE-API
+        - configValue
+      summary: create
+      description: create
+      operationId: create1
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config-value/search:
+    post:
+      tags:
+        - CORE-API
+        - configValue
+      summary: search
+      description: search
+      operationId: search1
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /config-value/update:
+    put:
+      tags:
+        - CORE-API
+        - configValue
+      summary: update_by_ID
+      description: update_by_ID
+      operationId: updateById1
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/id/1:
+    get:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_get_by_ID
+      description: roof-vendor_get_by_ID
+      operationId: roofVendorGetById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: ""
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/create:
+    post:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_create
+      description: roof-vendor_create
+      operationId: roofVendorCreate
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/update:
+    put:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_update_by_ID
+      description: roof-vendor_update_by_ID
+      operationId: roofVendorUpdateById
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/delete/7:
+    delete:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_delete_by_ID
+      description: roof-vendor_delete_by_ID
+      operationId: roofVendorDeleteById
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: 1242007b-b8a6-4111-a902-be9bb3629f1e
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/search:
+    post:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_search
+      description: roof-vendor_search
+      operationId: roofVendorSearch
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /roof-vendor/check-code:
+    post:
+      tags:
+        - CORE-API
+        - roofVendors
+      summary: roof-vendor_check_code
+      description: roof-vendor_check_code
+      operationId: roofVendorCheckCode
+      parameters:
+        - name: id
+          in: query
+          schema:
+            type: string
+            example: e87ecf23-5905-4e74-b773-26674ee5003f
+        - name: rowsPerPage
+          in: query
+          schema:
+            type: string
+            example: "10"
+          description: "type: number, số lượng dòng trên 1 trang"
+        - name: order
+          in: query
+          schema:
+            type: string
+            example: emails desc
+          description: "type: string, kiểu sắp xếp dữ liệu. VD: asc (tăng dần), desc (giảm dần)"
+        - name: getAll
+          in: query
+          schema:
+            type: string
+            example: "0"
+          description: "type: 1 hoặc 0, nếu getAll = 1 => lấy tất cả record (activated = true và activated = false)"
+        - name: q
+          in: query
+          schema:
+            type: string
+            example: "123"
+          description: "type: string, từ khoá cần tìm kiếm"
+        - name: userIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+        - name: projectIds
+          in: query
+          schema:
+            type: string
+            example: "1,2"
+      requestBody:
+        content:
+          text/plain:
+            example: "{{jsonBody}}"
+      responses:
+        "200":
+          description: ""
+  /healthz/:
+    get:
+      tags:
+        - CORE-API
+      summary: healthz
+      description: healthz
+      operationId: healthz
+      responses:
+        "200":
+          description: ""
+tags:
+  - name: CORE-API
+  - name: contacts
+  - name: customers
+  - name: operationCompanies
+  - name: configKey
+  - name: configValue
+  - name: roofVendors
+
