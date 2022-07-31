@@ -1,0 +1,1048 @@
+openapi: 3.0.0
+info:
+  title: RSM2022
+  version: 1.0.0
+servers:
+  - url: http://{{host}}
+components:
+  securitySchemes:
+    noauthAuth:
+      type: http
+      scheme: noauth
+tags:
+  - name: CORE-API
+  - name: CORE-API > contacts
+  - name: CORE-API > customers
+  - name: CORE-API > operationCompanies
+  - name: CORE-API > configKey
+  - name: CORE-API > configValue
+  - name: CORE-API > roofVendors
+paths:
+  /contacts/all:
+    get:
+      tags:
+        - CORE-API > contacts
+      summary: contact_get_all
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/id/1:
+    get:
+      tags:
+        - CORE-API > contacts
+      summary: contact_get_by_id
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/customerId/1:
+    get:
+      tags:
+        - CORE-API > contacts
+      summary: contact_get_by_customer_id
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/roofVendorId/1:
+    get:
+      tags:
+        - CORE-API > contacts
+      summary: contact_get_by_roof-vendor-id
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/create:
+    post:
+      tags:
+        - CORE-API > contacts
+      summary: contacts_create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/update:
+    put:
+      tags:
+        - CORE-API > contacts
+      summary: contacts_update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/delete/1:
+    delete:
+      tags:
+        - CORE-API > contacts
+      summary: contacts_delete
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /contacts/search:
+    post:
+      tags:
+        - CORE-API > contacts
+      summary: contacts_search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/all:
+    get:
+      tags:
+        - CORE-API > customers
+      summary: customer_get_all
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/id/1:
+    get:
+      tags:
+        - CORE-API > customers
+      summary: customer_get_by_id
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/create:
+    post:
+      tags:
+        - CORE-API > customers
+      summary: customer_create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/update:
+    put:
+      tags:
+        - CORE-API > customers
+      summary: customer_update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/delete/1:
+    delete:
+      tags:
+        - CORE-API > customers
+      summary: customer_delete
+      security:
+        - noauthAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/search:
+    post:
+      tags:
+        - CORE-API > customers
+      summary: customer_search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /customer/check-code:
+    post:
+      tags:
+        - CORE-API > customers
+      summary: check_code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/all:
+    get:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_get_all
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/id/1:
+    get:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_get_by_Id
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/create:
+    post:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/update:
+    put:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_update_by_ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/delete/1:
+    delete:
+      tags:
+        - CORE-API > operationCompanies
+      summary: delete_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/search:
+    post:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /operation-company/check-code:
+    post:
+      tags:
+        - CORE-API > operationCompanies
+      summary: operation-company_check_code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/id/1:
+    get:
+      tags:
+        - CORE-API > configKey
+      summary: get_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/create:
+    post:
+      tags:
+        - CORE-API > configKey
+      summary: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/check-code:
+    post:
+      tags:
+        - CORE-API > configKey
+      summary: check_code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/search:
+    post:
+      tags:
+        - CORE-API > configKey
+      summary: search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/update:
+    put:
+      tags:
+        - CORE-API > configKey
+      summary: update_by_ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/all:
+    get:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_get_all
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config/delete/7:
+    delete:
+      tags:
+        - CORE-API > configValue
+      summary: delete_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config-value/id/1:
+    get:
+      tags:
+        - CORE-API > configValue
+      summary: get_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config-value/create:
+    post:
+      tags:
+        - CORE-API > configValue
+      summary: create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config-value/search:
+    post:
+      tags:
+        - CORE-API > configValue
+      summary: search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /config-value/update:
+    put:
+      tags:
+        - CORE-API > configValue
+      summary: update_by_ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/id/1:
+    get:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_get_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/create:
+    post:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_create
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/update:
+    put:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_update_by_ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/delete/7:
+    delete:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_delete_by_ID
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/search:
+    post:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_search
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /roof-vendor/check-code:
+    post:
+      tags:
+        - CORE-API > roofVendors
+      summary: roof-vendor_check_code
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: '{{jsonBody}}'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: ree_token
+          in: header
+          schema:
+            type: string
+          example: '{{ree_token}}'
+        - name: x-user-agent-t
+          in: header
+          schema:
+            type: string
+          example: '{{devSecret}}'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /healthz/:
+    get:
+      tags:
+        - CORE-API
+      summary: healthz
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
